@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Style Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Test</title>
 </head>
+
 <body>
-    
+    <div class="dark-theme">
+    <!--  Nav menu -->
+    <section class="navmenu no-padding">
+        <div class="container">
+            <!-- Mobile -->
+            <div class="navmenu__mobile">
+                <img src="./images/icon/logo.svg" alt="Logo">
+                <span class="navmenu__mobile-btn" id="toggle"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M28 16C28 16.2652 27.8946 16.5196 27.7071 16.7071C27.5196 16.8946 27.2652 17 27 17H17V27C17 27.2652 16.8946 27.5196 16.7071 27.7071C16.5196 27.8946 16.2652 28 16 28C15.7348 28 15.4804 27.8946 15.2929 27.7071C15.1054 27.5196 15 27.2652 15 27V17H5C4.73478 17 4.48043 16.8946 4.29289 16.7071C4.10536 16.5196 4 16.2652 4 16C4 15.7348 4.10536 15.4804 4.29289 15.2929C4.48043 15.1054 4.73478 15 5 15H15V5C15 4.73478 15.1054 4.48043 15.2929 4.29289C15.4804 4.10536 15.7348 4 16 4C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V15H27C27.2652 15 27.5196 15.1054 27.7071 15.2929C27.8946 15.4804 28 15.7348 28 16Z"
+                            fill="#565656" />
+                    </svg></span>
+            </div>
+            <!-- Desktop -->
+            <nav class="navmenu__desktop" id="navbar">
+                <ul>
+                    <li><a href="javascript:void(0);" id="to-top">Home</a></li>
+                    <li><a href="javascript:void(0);" id="to-about">About Me</a></li>
+                    <li><a href="javascript:void(0);" id="to-link2">Service</a></li>
+                    <div class="navmenu__logo">
+
+                        <img src="./images/icon/logo.svg" alt="Logo">
+
+                        <div class="navmenu__logo-name">
+                            <div class="navmenu__logo-nickname">
+                                <span>SARA</span>
+                            </div>
+                            <div class="navmenu__logo-realname">
+                                <span>Made by</span>
+                                <span>Chakawat.c</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <li><a href="javascript:void(0);" id="to-link3">Experience</a></li>
+                    <li><a href="javascript:void(0);" id="to-link4">Portfolio</a></li>
+                    <li><a href="javascript:void(0);" id="to-link4">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+
+    <!--  Sec Top Banner -->
+    <section id="top" class="top no-padding-b">
+        <div class="container">
+            <div class="top__inner">
+                <div class="top__inner-person">
+                    <div class="top__inner-title">
+                        <span class="top__inner-hello">
+                            Hello
+                        </span>
+                        <div class="top__inner-name">
+                            <p>I,m <span>Sara</span>,</p>
+                            <p>Product Designer</p>
+                        </div>
+                    </div>
+                    <div class="top__inner-img">
+                        <img src="./images/top-person.png" alt="Person">
+                    </div>
+                </div>
+                <img class="top__inner-gimmick" src="./images/top-gimmick.svg" alt="Gimmick">
+                <div class="top__inner-content">
+                    <div class="top__inner-desc">
+                        <span> Jenny’s Exceptional product design ensure our website’s success. Highly
+                            Recommended</span>
+                    </div>
+                    <div class="top__inner-experience">
+                        <img src="./images/icon/star.svg" alt="Star">
+                        <div class="top__inner-date">
+                            <p>5 Year</p>
+                            <p>Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!--  Sec About Me -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="flex-col">
+                 
+                    <img class="about__img"  src="./images/about-person.png" alt="Person">
+              
+                    <img class="about__gimmick" src="./images/about-gimmick.svg" alt="Gimmick">
+           
+                </div>
+                <div class="flex-col">
+                    <h2 class="head-title">Title</h2>
+                    <div class="about__content">
+                        <p class="about__content-desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi fugiat cum vel sint non deleniti dolorem ea corporis ab, voluptatum illum assumenda suscipit voluptates, totam cupiditate quae harum consectetur deserunt.
+                        </p>
+                        <div class="about__content-experience">
+                            <span >99 +</span> <span>Year
+                                experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+           
+        </div>
+    </section>
+    <section id="link2" class="section link2">
+        <div class="container">
+            <h2 class="header-title">Linkk2</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur consectetur deserunt eaque temporibus
+                nesciunt? Commodi laudantium consequatur itaque suscipit, ea accusamus repudiandae, debitis ratione
+                sequi, fugiat quam soluta alias possimus!</p>
+        </div>
+    </section>
+    <section id="link3" class="section link3">
+        <h2 class="header-title">Linkk3</h2>
+    </section>
+    <section id="link4" class="section link4">
+        <h2 class="header-title">Linkk4</h2>
+    </section>
+</div>
+    <!-- Script Js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="js/script.js"></script>
+  
+  <!-- gsap-latest-beta.min.js -->
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426'></script>
+  <!-- ScrollTrigger.min.js -->
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js'></script>
+    <script src="js/animate.js"></script>
 </body>
+
 </html>
