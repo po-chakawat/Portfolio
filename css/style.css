@@ -160,6 +160,7 @@ section.no-padding-b {
 .navmenu__desktop {
   padding: 0.75rem 1rem;
   background-color: var(--bg-black-opacity);
+  -webkit-backdrop-filter: var(--backdrop--blur);
   backdrop-filter: var(--backdrop--blur);
   border-radius: var(--type-border-radius-full);
 }
@@ -298,7 +299,6 @@ section.no-padding-b {
   }
   .navmenu__desktop.toggle {
     background-color: var(--bg-black-opacity);
-    -webkit-backdrop-filter: var(--backdrop--blur);
     backdrop-filter: var(--backdrop--blur);
     height: 366px;
     padding: 1rem;
