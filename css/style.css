@@ -294,12 +294,14 @@ section.no-padding-b {
     backdrop-filter: none;
     overflow: hidden;
     transition: height 250ms ease;
+    opacity: 0;
   }
   .navmenu__desktop.toggle {
     background-color: var(--bg-black-opacity);
     backdrop-filter: var(--backdrop--blur);
     height: 366px;
     padding: 1rem;
+    opacity: 1;
   }
   .navmenu__desktop ul {
     flex-direction: column;
