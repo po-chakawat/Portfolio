@@ -47,8 +47,6 @@ function SliderScrollTrigger() {
             start: "10% 100%",
             end: "100% 0%",
             markers: "true",
-
-     
         }
     })
     SliderScrollTrigger
