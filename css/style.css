@@ -330,7 +330,7 @@ section.no-padding-b {
 }
 
 .top {
-  min-height: 90vh;
+  min-height: 100vh;
   padding-top: 105px;
 }
 .top__inner {
@@ -480,7 +480,6 @@ section.no-padding-b {
 @media (max-width: 1200px) {
   .top {
     padding-top: 97px;
-    min-height: auto;
   }
   .top__inner-gimmick {
     height: 80%;
@@ -495,6 +494,9 @@ section.no-padding-b {
   }
 }
 @media (max-width: 768px) {
+  .top {
+    min-height: auto;
+  }
   .top__inner-img::before {
     width: 600px;
     height: 300px;

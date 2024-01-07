@@ -485,7 +485,7 @@ section.no-padding-b {
 
 /// /* ------------------------- Top Banner -------------------------------------------------- */
 .top {
-    min-height: 90vh;
+    min-height: 100vh;
     padding-top: 105px;
 
     &__inner {
@@ -663,7 +663,6 @@ section.no-padding-b {
 
     @include breakpoint-down(xl) {
         padding-top: 97px;
-        min-height: auto;
 
 
         &__inner {
@@ -684,7 +683,7 @@ section.no-padding-b {
     }
 
     @include breakpoint-down(md) {
-      
+        min-height: auto;
         &__inner {
             &-img {
                 &::before {
