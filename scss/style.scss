@@ -434,13 +434,13 @@ section.no-padding-b {
             height: 0;
             border-radius: var(--type-border-radius-03);
             background: transparent;
-            backdrop-filter: none;
             overflow: hidden;
             transition: height 250ms ease;
             opacity: 0;
 
             &.toggle {
                 background-color: var(--bg-black-opacity);
+                -webkit-backdrop-filter: var(--backdrop--blur);
                 backdrop-filter: var(--backdrop--blur);
                 height: 366px;
                 padding: 1rem;
