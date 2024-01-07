@@ -251,6 +251,7 @@ section.no-padding-b {
 .navmenu__mobile {
   display: none;
   background-color: var(--bg-black-opacity);
+  -webkit-backdrop-filter: var(--backdrop--blur);
   backdrop-filter: var(--backdrop--blur);
   border-radius: var(--type-border-radius-full);
 }
