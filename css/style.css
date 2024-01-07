@@ -480,6 +480,7 @@ section.no-padding-b {
 @media (max-width: 1200px) {
   .top {
     padding-top: 97px;
+    min-height: auto;
   }
   .top__inner-gimmick {
     height: 80%;
@@ -494,21 +495,18 @@ section.no-padding-b {
   }
 }
 @media (max-width: 768px) {
-  .top {
-    min-height: 70vh;
-  }
   .top__inner-img::before {
     width: 600px;
     height: 300px;
-  }
-  .top__inner-img img {
-    width: 18rem;
   }
   .top__inner-content {
     padding: 0;
   }
 }
 @media (max-width: 576px) {
+  .top__inner-img img {
+    width: 40vh;
+  }
   .top__inner-content {
     flex-direction: column;
     justify-content: start;

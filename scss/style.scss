@@ -662,6 +662,8 @@ section.no-padding-b {
 
     @include breakpoint-down(xl) {
         padding-top: 97px;
+        min-height: auto;
+
 
         &__inner {
             &-gimmick {
@@ -681,17 +683,12 @@ section.no-padding-b {
     }
 
     @include breakpoint-down(md) {
-        min-height: 70vh;
-
+      
         &__inner {
             &-img {
                 &::before {
                     width: 600px;
                     height: 300px;
-                }
-
-                img {
-                    width: 18rem;
                 }
             }
 
@@ -703,6 +700,11 @@ section.no-padding-b {
 
     @include breakpoint-down(sm) {
         &__inner {
+            &-img {
+                img {
+                    width: 40vh;
+                }
+            }
             &-content {
                 flex-direction: column;
                 justify-content: start;
