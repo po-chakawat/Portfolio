@@ -1,11 +1,9 @@
 gsap.registerPlugin(ScrollTrigger);
 
-//---------------------Landing Page ScrollTrigger---------------------
-function LandingPageScrollTrigger() {
+//---------------------Top ScrollTrigger---------------------
+function TopScrollTrigger() {
 
-
-
-    let LandingPageScrollTrigger = gsap.timeline({
+    let TopScrollTrigger = gsap.timeline({
         scrollTrigger: {
             trigger: ".top",
             toggleActions: "restart restart restart restart",
@@ -14,7 +12,7 @@ function LandingPageScrollTrigger() {
             markers: "true",
         }
     })
-    LandingPageScrollTrigger
+    TopScrollTrigger
   
         .from('.top .top__inner .top__inner-title .top__inner-hello', {
             opacity: 0, y: "-18%", duration: 1.3, ease: "sine",
@@ -35,12 +33,12 @@ function LandingPageScrollTrigger() {
 
 
 }
-//---------------------/Landing Page ScrollTrigger---------------------
-function SliderScrollTrigger() {
+//---------------------/About Page ScrollTrigger---------------------
+function AboutScrollTrigger() {
 
 
 
-    let SliderScrollTrigger = gsap.timeline({
+    let AboutScrollTrigger = gsap.timeline({
         scrollTrigger: {
             trigger: ".about",
             toggleActions: "restart restart restart restart",
@@ -49,7 +47,7 @@ function SliderScrollTrigger() {
             markers: "true",
         }
     })
-    SliderScrollTrigger
+    AboutScrollTrigger
 
         .from('.about .head-title', {
             opacity: 0, y: "18%", duration: 1.3, ease: "sine",
@@ -65,25 +63,61 @@ function SliderScrollTrigger() {
 }
 
 
-/*-------------Navbar (max-width: 400px)------------- */
-function Navbar() {
-    gsap.from('#wrapper #Navbar', {
-        opacity: 0, x: "40%", duration: 2.2, ease: "sine.in",
-    })
-    var NavAni = gsap.timeline();
-    NavAni.from('#wrapper nav', {
-        opacity: 0, y: "13%", duration: 0.5, ease: "sine",
-    })
-        .reverse();
-    $("#wrapper #Navbar").click(function () {
-        $("#wrapper nav").toggleClass("DisplayNone");
-        NavAni.reversed(!NavAni.reversed());
-    });
-}
-/*-------------/Navbar (max-width: 400px)------------- */
-
 window.onload = () => {
-    LandingPageScrollTrigger()
-    SliderScrollTrigger()
+    TopScrollTrigger()
+    AboutScrollTrigger()
  
 }
+
+
+//---------------------/Cursor Mouse---------------------
+
+gsap.set(".cursor", { force3D: true });
+document.addEventListener("mousemove", (e) => {
+  let x = e.clientX;
+  let y = e.clientY;
+
+  gsap.to(".cursor", {
+    x: x - 16,
+    y: y - 16,
+    ease: "power3"
+  });
+});
+
+document.body.addEventListener("mouseleave", () => {
+  gsap.to(".cursor", {
+    scale: 0,
+    duration: 0.1,
+    ease: "none"
+  });
+});
+
+document.body.addEventListener("mouseenter", () => {
+  gsap.to(".cursor", {
+    scale: 1,
+    duration: 0.1,
+    ease: "none"
+  });
+});
+
+let hoverCursors = document.querySelectorAll('[data-cursor="hover"]');
+
+hoverCursors.forEach(function (cursor) {
+  cursor.addEventListener("mouseenter", () => {
+    gsap.to(".cursor", {
+      scale: 1.7
+    });
+  });
+
+  cursor.addEventListener("mouseleave", () => {
+    gsap.to(".cursor", {
+      scale: 1
+    });
+  });
+});
+
+
+
+
+
+

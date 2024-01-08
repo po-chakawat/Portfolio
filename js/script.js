@@ -16,6 +16,10 @@ document.getElementById("to-about").addEventListener('click',function(){
     nav.className = "navmenu__desktop";
     scroll(document.getElementById("about"),1000);
 });
+document.getElementById("to-service").addEventListener('click',function(){
+    nav.className = "navmenu__desktop";
+    scroll(document.getElementById("service"),1000);
+});
 
 $('.navmenu__mobile-btn').click(function(){
     $(this).toggleClass('active')
@@ -56,6 +60,3 @@ function scroll(element,time){
     }
     draw();
 }
-
-
-
