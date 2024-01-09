@@ -8,15 +8,15 @@ document.getElementById("toggle").addEventListener('click',function(){
 });
 
 //parametros de la funcion elemento destino y duracion de la animacion en milisegundos
-document.getElementById("to-top").addEventListener('click',function(){
+document.getElementById("tops").addEventListener('click',function(){
     nav.className = "navmenu__desktop";
     scroll(document.getElementById("tops"),1000);
 });
-document.getElementById("to-about").addEventListener('click',function(){
+document.getElementById("about").addEventListener('click',function(){
     nav.className = "navmenu__desktop";
     scroll(document.getElementById("abouts"),1000);
 });
-document.getElementById("to-service").addEventListener('click',function(){
+document.getElementById("service").addEventListener('click',function(){
     nav.className = "navmenu__desktop";
     scroll(document.getElementById("services"),1000);
 });

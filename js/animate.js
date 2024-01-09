@@ -119,6 +119,8 @@ document.body.addEventListener("mouseenter", () => {
   gsap.to(".cursor", {
     scale: 1,
     duration: 0.1,
+    width:16,
+    height:16,
     ease: "none"
   });
 });
@@ -128,12 +130,15 @@ let hoverCursors = document.querySelectorAll('[data-cursor="hover"]');
 hoverCursors.forEach(function (cursor) {
   cursor.addEventListener("mouseenter", () => {
     gsap.to(".cursor", {
-      scale: 1.7
+        width:40,
+        height:40
     });
   });
 
   cursor.addEventListener("mouseleave", () => {
     gsap.to(".cursor", {
+        width:16,
+        height:16,
       scale: 1
     });
   });
