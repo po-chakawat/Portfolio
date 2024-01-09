@@ -279,7 +279,14 @@ section.no-padding-b {
     will-change: transform;
     pointer-events: none;
     z-index: 9999;
+
+    @include breakpoint-down(lg) {
+        display: none;
+    }
 }
+
+
+
 .text-center{
     text-align: center;
 }
@@ -856,6 +863,9 @@ section.no-padding-b {
     }
 
     &__card {
+        display: flex;
+    flex-direction: column;
+    height: 100%;
         padding: 1.5rem;
         background: var(--bg-black-opacity);
         border-radius: var(--type-border-radius-01);
@@ -868,10 +878,11 @@ section.no-padding-b {
     }
 
     &__tools {
-        margin-top: 1.875rem;
+        margin-top: auto;
 
         &-title {
             font-weight: var(--type-font-weight-bold);
+            margin-top: 1.875rem ;
             margin-bottom: 0.5rem;
         }
     }
@@ -908,5 +919,14 @@ section.no-padding-b {
             }
         }
 
+    }
+
+    @include breakpoint-down(lg) {
+        .row{
+            flex-wrap: wrap;
+        }
+        .flex-col{
+            width: 100%;
+        }
     }
 }
