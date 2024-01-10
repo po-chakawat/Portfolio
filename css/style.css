@@ -745,6 +745,10 @@ section.no-padding-b {
 .skill__inner .flex-col {
   flex: 0 0 180px;
 }
+.skill__inner p {
+  text-align: center;
+  margin-top: 1.25rem;
+}
 .skill__card {
   padding: 3.75rem 2.5rem;
   gap: 1.25rem;
