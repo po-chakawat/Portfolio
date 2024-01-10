@@ -8,7 +8,7 @@ function TopScrollTrigger() {
       trigger: ".top",
       toggleActions: "restart restart restart restart",
       start: "0% 100%",
-      end: "100% 0%",
+      end: "95% 0%",
       markers: "true",
     }
   })
@@ -59,7 +59,7 @@ function AboutScrollTrigger() {
     }, 0.4)
 }
 
-//---------------------/About Page ScrollTrigger---------------------
+//---------------------/Service & Skill Page ScrollTrigger---------------------
 function ServiceScrollTrigger() {
   let ServiceScrollTrigger = gsap.timeline({
     scrollTrigger: {
@@ -76,14 +76,21 @@ function ServiceScrollTrigger() {
       opacity: 0, y: "8%", duration: 1, ease: "sine",
     }, 0.4)
 
-    .from('.service .about__content-desc', {
-      opacity: 0, y: "8%", duration: 1.3, stagger: 0.4, ease: "sine",
-    }, 0.4)
-
     .from('.service .service__card ', {
       opacity: 0, y: "8%", duration: 1.3, stagger: 0.4, ease: "sine",
     }, 0.4)
+
+    .from('.service .skill__card ', {
+      opacity: 0, y: "8%", duration: 1.3, stagger: 0.4, ease: "sine",
+    }, 0.4)
+    .from('.service .service__hand .service__hand-left ', {
+      opacity: 0, x: "48%", y: "-28%", duration: 4, stagger: 0.4, ease: "sine",
+    }, 0.4)
+    .from('.service .service__hand .service__hand-right ', {
+      opacity: 0, x: "-48%", y: "-28%", duration: 4, stagger: 0.4, ease: "sine",
+    }, 0.4)
 }
+
 
 
 window.onload = () => {

@@ -60,3 +60,26 @@ function scroll(element,time){
     }
     draw();
 }
+
+//Mouse hover spotlight effect 
+const mouseHandler = (e) => {
+    const pricingContainer = e.currentTarget;
+    const rect = pricingContainer.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+  
+    const pricingElements = pricingContainer.querySelectorAll('.spotlight');
+  
+    pricingElements.forEach((pricing) => {
+      const pricingRect = pricing.getBoundingClientRect();
+      const newX = x - (pricingRect.left - rect.left);
+      const newY = y - (pricingRect.top - rect.top);
+  
+      pricing.style.setProperty('--mouse-x', newX + 'px');
+      pricing.style.setProperty('--mouse-y', newY + 'px');
+    });
+  };
+  
+  document.querySelector(".service").addEventListener("mousemove", (e)=>{
+    mouseHandler(e)
+  });
