@@ -92,11 +92,158 @@ function ServiceScrollTrigger() {
 }
 
 
+gsap.set(".experience__line", {transformOrigin: "top"})
+
+
+gsap.fromTo(".experience__line", {
+  scaleY: 0,
+}, {
+  scaleY: 1.1,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".experience__timeline",
+    start: "top 100%",
+    end: "bottom 30%",
+     markers: "true",
+    scrub: 1.5,
+  }
+});
+
+
+const tlCompany = gsap.utils.toArray('.experience__timeline .row ');
+//loop thorugh the list Elements and apply the Scrolltrigger to draw the Border around the Elements
+if($(window).width() >= 800){
+    console.log("desktop");
+    tlCompany.forEach(tC => {
+  gsap.fromTo(tC, { 
+    opacity: 0,
+    ease: "linear",
+    scrollTrigger: {
+      trigger: tC,
+      scrub: true,
+      // markers: "true",
+      start: "top 100%",
+      end: "bottom top",
+    }
+    },{
+      opacity: 3,
+        ease: "linear",
+        scrollTrigger: {
+            trigger: tC,
+            scrub: true,
+            // markers: "true",
+            start: "top 90%",
+            end: "bottom top",
+          }
+  })
+});
+}
+else {
+    console.log("mobile");
+    tlCompany.forEach(tC => {
+        gsap.fromTo(tC, { 
+          opacity: 0,
+          ease: "linear",
+          scrollTrigger: {
+            trigger: tC,
+            scrub: true,
+            start: "top 80%",
+            end: "bottom 80%",
+          }
+          },{
+            opacity: 3,
+              ease: "linear",
+              scrollTrigger: {
+                  trigger: tC,
+                  scrub: true,
+                  start: "top 80%",
+                  end: "bottom 80%",
+                }
+        })
+      });
+}
+
+/////////////////////////////////////////////////////////////////////
+
+
+
+const tlContents = gsap.utils.toArray('.timelineContent');
+//loop thorugh the list Elements and apply the Scrolltrigger to draw the Border around the Elements
+if($(window).width() >= 800){
+    console.log("desktop");
+tlContents.forEach(tC => {
+  gsap.fromTo(tC, { 
+    'background-size': '0%',
+    ease: "linear",
+    scrollTrigger: {
+      trigger: tC,
+      scrub: true,
+      start: "top 65%",
+      end: "bottom 65%",
+    }
+    },{
+        'background-size': '150%',
+        ease: "linear",
+        scrollTrigger: {
+            trigger: tC,
+            scrub: true,
+            start: "top 65%",
+            end: "bottom 65%",
+          }
+  })
+});
+}
+else {
+    console.log("mobile");
+    tlContents.forEach(tC => {
+        gsap.fromTo(tC, { 
+          'background-size': '0%',
+          ease: "linear",
+          scrollTrigger: {
+            trigger: tC,
+            scrub: true,
+            start: "top 65%",
+            end: "bottom 65%",
+          }
+          },{
+              'background-size': '250%',
+              ease: "linear",
+              scrollTrigger: {
+                  trigger: tC,
+                  scrub: true,
+                  start: "top 65%",
+                  end: "bottom 65%",
+                }
+        })
+      });
+}
+tlContents.forEach(tC => {
+    gsap.fromTo($(tC).find('div').children(), { 
+      opacity: 0,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: tC,
+        scrub: true,
+        start: "top 65%",
+        end: "bottom 65%",
+      }
+      },{
+        opacity: 3,
+        ease: "linear",
+        scrollTrigger: {
+          trigger: tC,
+          scrub: true,
+          start: "top 65%",
+          end: "bottom 65%",
+        }
+    })
+  });
 
 window.onload = () => {
   TopScrollTrigger()
   AboutScrollTrigger()
   ServiceScrollTrigger()
+ 
 }
 
 

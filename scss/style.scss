@@ -103,6 +103,7 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --color-gray: #98A2B3;
+    --color-gray-light: #D8D8D8;
     /* BG Body Dark theme */
     --bg-dark-theme: #171717;
     --bg-black-opacity: rgba(255, 255, 255, 0.05);
@@ -119,8 +120,8 @@
     /* Font size */
     --type-heading-h1-font-size: 3.75rem;
     --type-heading-h2-font-size: clamp(2rem, 2.3vw, 2.25rem);
-    --type-heading-h3-font-size: 1.5rem;
-    --type-heading-h4-font-size: clamp(1rem, 1.2vw, 1.25rem);
+    --type-heading-h3-font-size: clamp(1.375rem, 2.3vw, 1.5rem);
+    --type-heading-h4-font-size: clamp(1.125rem, 2.2vw, 1.25rem);
     --type-heading-h5-font-size: 1.125rem;
     --type-heading-h6-font-size: 0.875rem;
     --type-normal-font-size: 1rem;
@@ -172,6 +173,34 @@ ul {
 a {
     text-decoration: none;
 
+}
+
+h1 {
+    font-size: var(--type-heading-h1-font-size);
+}
+
+h2 {
+    font-size: var(--type-heading-h2-font-size);
+    font-weight: var(--type-font-weight-bold);
+}
+
+h3 {
+    font-size: var(--type-heading-h3-font-size);
+    font-weight: var(--type-font-weight-bold);
+}
+
+h4 {
+    font-size: var(--type-heading-h4-font-size);
+    font-weight: var(--type-font-weight-semibold);
+}
+
+h5 {
+    font-size: var(--type-heading-h5-font-size);
+    font-weight: var(--type-font-weight-semibold);
+}
+
+h6 {
+    font-size: var(--type-heading-h6-font-size);
 }
 
 .dark-theme {
@@ -260,8 +289,7 @@ section.no-padding-b {
 
 .heading {
     &__title {
-        font-size: var(--type-heading-h2-font-size);
-        font-weight: var(--type-font-weight-medium);
+        text-transform: uppercase;
         background: var(--bg-gradient-neon);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -905,8 +933,14 @@ section.no-padding-b {
     }
 
     &__title {
-        font-size: var(--type-heading-h3-font-size);
         margin-bottom: 1.5rem;
+    }
+
+    &__desc {
+        p {
+            color: var(--color-gray-light);
+        }
+
     }
 
     &__tools {
@@ -949,7 +983,7 @@ section.no-padding-b {
 
             span {
                 font-size: var(--type-x-small-font-size);
-                color: var(--color-gray);
+                color: var(--color-gray-light);
             }
         }
 
@@ -965,7 +999,8 @@ section.no-padding-b {
         justify-content: space-between;
         pointer-events: none;
         z-index: -1;
-        img{
+
+        img {
             width: 22vw;
             height: 100%;
         }
@@ -990,6 +1025,7 @@ section.no-padding-b {
         p {
             text-align: center;
             margin-top: 1.25rem;
+            color: var(--color-gray-light);
         }
     }
 
@@ -1016,10 +1052,6 @@ section.no-padding-b {
             }
         }
 
-        span {
-            font-size: var(--type-heading-h4-font-size);
-            font-weight: var(--type-font-weight-medium);
-        }
     }
 
 }
@@ -1035,11 +1067,12 @@ section.no-padding-b {
                 width: 100%;
             }
         }
-&__hand{
-    img{
-        width: 25vw;
-    }
-}
+
+        &__hand {
+            img {
+                width: 25vw;
+            }
+        }
     }
 
     .skill {
@@ -1053,7 +1086,8 @@ section.no-padding-b {
                 flex: 0 0 48.33%;
             }
         }
-        &__card{
+
+        &__card {
             padding: 2.75rem 2.5rem;
         }
     }
@@ -1079,5 +1113,157 @@ section.no-padding-b {
             }
 
         }
+    }
+}
+
+
+.experience {
+    &__timeline {
+        position: relative;
+        display: grid;
+        gap: 1.875rem;
+
+        .row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 12rem;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        left: 30%;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background: var(--bg-gradient-neon);
+
+    }
+
+    &__year {
+        width: 20%;
+        display: flex;
+        justify-content: end;
+    }
+
+    &__company {
+        width: 60%;
+        padding: 2rem;
+        background: var(--bg-black-opacity);
+        border-radius: var(--type-border-radius-01);
+        -webkit-backdrop-filter: var(--backdrop--blur);
+        backdrop-filter: var(--backdrop--blur);
+
+        &-name {
+            margin-bottom: 1rem;
+            h3{
+                text-transform:uppercase;
+            }
+
+        }
+
+        &-position {
+            margin-bottom: 1rem;
+            p {
+                color: var(--color-gray-light);
+            }
+        }
+
+        &-desc {
+            h3 {
+                margin-bottom: 0.5rem;
+            }
+
+            ul {
+                line-height: 2;
+
+                li {
+                    position: relative;
+                    padding-left: 1rem;
+                    color: var(--color-gray-light);
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        top: 10px;
+                        bottom: 0;
+                        left: 0;
+                        background: var(--bg-gradient-neon);
+                        border-radius: var(--type-border-radius-full);
+                    }
+                }
+            }
+        }
+    }
+
+    &__bullet {
+        position: absolute;
+        display: flex;
+        left: 29.33%;
+
+    }
+
+
+    @include breakpoint-down(xxl) {
+        &__bullet {
+            left: 29.1%;
+
+        }
+    }
+  
+ 
+    @include breakpoint-down(xl) {
+        &__timeline {
+            .row {
+                gap: 9rem;
+            }
+        }
+        &__year{
+            width: 30%;
+            justify-content: start;
+        }
+        &__company{
+            width: 70%;
+        }
+        &__bullet {
+            left: 28.88%;
+        }
+    }
+
+       @include breakpoint-down(lg) {
+        &__timeline {
+            .row {
+                gap: 6rem;
+            }
+        }
+        &__bullet {
+            left: 28.55%;
+        }
+    }
+    @include breakpoint-down(md) {
+&__timeline{
+    .row{
+        gap: 1.25rem;
+        flex-wrap: wrap;
+    }
+}
+&__line{
+    left: 11px;
+}
+&__year{
+    width: 100%;
+    margin-left: 2.5rem;
+}
+&__company{
+    width: 100%;
+    padding: 1.5rem;
+    margin-left: 2.5rem;
+}
+&__bullet{
+    left: 0;
+}
     }
 }
