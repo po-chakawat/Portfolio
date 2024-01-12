@@ -84,14 +84,14 @@ function ServiceScrollTrigger() {
       opacity: 0, y: "8%", duration: 1.3, stagger: 0.4, ease: "sine",
     }, 0.4)
     .from('.service .service__hand .service__hand-left ', {
-      opacity: 0, x: "48%", y: "-28%", duration: 4, stagger: 0.4, ease: "sine",
+      opacity: 0, x: "48%", y: "28%", duration: 4, stagger: 0.4, ease: "sine",
     }, 0.4)
     .from('.service .service__hand .service__hand-right ', {
-      opacity: 0, x: "-48%", y: "-28%", duration: 4, stagger: 0.4, ease: "sine",
+      opacity: 0, x: "-48%", y: "28%", duration: 4, stagger: 0.4, ease: "sine",
     }, 0.4)
 }
 
-
+//---------------------/Experience Page ScrollTrigger---------------------
 gsap.set(".experience__line", {transformOrigin: "top"})
 
 
@@ -108,7 +108,6 @@ gsap.fromTo(".experience__line", {
     scrub: 1.5,
   }
 });
-
 
 const tlCompany = gsap.utils.toArray('.experience__timeline .row ');
 //loop thorugh the list Elements and apply the Scrolltrigger to draw the Border around the Elements
@@ -163,87 +162,43 @@ else {
       });
 }
 
-/////////////////////////////////////////////////////////////////////
+//---------------------/Portfolio Page ScrollTrigger---------------------
 
+function LandingPageScrollTrigger() {
 
+  gsap.to('portfolio', { // LoadingAnimation---------------------
+      opacity: 1, duration: 1.3,
+  }) // /LoadingAnimation---------------------
 
-const tlContents = gsap.utils.toArray('.timelineContent');
-//loop thorugh the list Elements and apply the Scrolltrigger to draw the Border around the Elements
-if($(window).width() >= 800){
-    console.log("desktop");
-tlContents.forEach(tC => {
-  gsap.fromTo(tC, { 
-    'background-size': '0%',
-    ease: "linear",
-    scrollTrigger: {
-      trigger: tC,
-      scrub: true,
-      start: "top 65%",
-      end: "bottom 65%",
-    }
-    },{
-        'background-size': '150%',
-        ease: "linear",
-        scrollTrigger: {
-            trigger: tC,
-            scrub: true,
-            start: "top 65%",
-            end: "bottom 65%",
-          }
-  })
-});
-}
-else {
-    console.log("mobile");
-    tlContents.forEach(tC => {
-        gsap.fromTo(tC, { 
-          'background-size': '0%',
-          ease: "linear",
-          scrollTrigger: {
-            trigger: tC,
-            scrub: true,
-            start: "top 65%",
-            end: "bottom 65%",
-          }
-          },{
-              'background-size': '250%',
-              ease: "linear",
-              scrollTrigger: {
-                  trigger: tC,
-                  scrub: true,
-                  start: "top 65%",
-                  end: "bottom 65%",
-                }
-        })
-      });
-}
-tlContents.forEach(tC => {
-    gsap.fromTo($(tC).find('div').children(), { 
-      opacity: 0,
-      ease: "linear",
+  let LandingPageScrollTrigger = gsap.timeline({
       scrollTrigger: {
-        trigger: tC,
-        scrub: true,
-        start: "top 65%",
-        end: "bottom 65%",
+          trigger: ".portfolio__img",
+          start: "top 0%",
+          end: "bottom 0%",
+          markers:true,
+          pin: ".portfolio__img",
+          scrub: 2.2,
       }
-      },{
-        opacity: 3,
-        ease: "linear",
-        scrollTrigger: {
-          trigger: tC,
-          scrub: true,
-          start: "top 65%",
-          end: "bottom 65%",
-        }
-    })
-  });
+  })
+  LandingPageScrollTrigger
+      .to('.portfolio__img .portfolio__img--07', { transform: 'translateZ(4500px)', }, 0)
+      .to('.portfolio__img .portfolio__img--06', { transform: 'translateZ(3700px)', }, 0)
+      .to('.portfolio__img .portfolio__img--05', { transform: 'translateZ(3100px)', }, 0)
+      .to('.portfolio__img .portfolio__img--04', { transform: 'translateZ(2800px)', }, 0)
+      .to('.portfolio__img .portfolio__img--03', { transform: 'translateZ(2600px)', }, 0)
+      .to('.portfolio__img .portfolio__img--02', { transform: 'translateZ(2400px)', }, 0)
+      .to('.portfolio__img .portfolio__img--01', { transform: 'translateZ(2200px)', }, 0)
+      .from('.portfolio__img .portfolio__text', { y: 0, opacity: 0 }, 0.2)
+}
+
+
+
 
 window.onload = () => {
   TopScrollTrigger()
   AboutScrollTrigger()
   ServiceScrollTrigger()
- 
+  LandingPageScrollTrigger()
 }
 
 

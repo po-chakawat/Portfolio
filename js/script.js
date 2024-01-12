@@ -8,19 +8,26 @@ document.getElementById("toggle").addEventListener('click',function(){
 });
 
 //parametros de la funcion elemento destino y duracion de la animacion en milisegundos
-document.getElementById("tops").addEventListener('click',function(){
+document.getElementById("NavTop").addEventListener('click',function(){
     nav.className = "navmenu__desktop";
-    scroll(document.getElementById("tops"),1000);
+    scroll(document.getElementById("SecTop"),1000);
 });
-document.getElementById("about").addEventListener('click',function(){
+document.getElementById("NavAbout").addEventListener('click',function(){
     nav.className = "navmenu__desktop";
-    scroll(document.getElementById("abouts"),1000);
+    scroll(document.getElementById("SecAbout"),1000);
 });
-document.getElementById("service").addEventListener('click',function(){
+document.getElementById("NavService").addEventListener('click',function(){
     nav.className = "navmenu__desktop";
-    scroll(document.getElementById("services"),1000);
+    scroll(document.getElementById("SecService"),1000);
 });
-
+document.getElementById("NavExperience").addEventListener('click',function(){
+    nav.className = "navmenu__desktop";
+    scroll(document.getElementById("SecExperience"),1000);
+});
+document.getElementById("NavPortfolio").addEventListener('click',function(){
+    nav.className = "navmenu__desktop";
+    scroll(document.getElementById("SecPortfolio"),1000);
+});
 $('.navmenu__mobile-btn').click(function(){
     $(this).toggleClass('active')
     $('.menu-mobile').toggleClass('active')

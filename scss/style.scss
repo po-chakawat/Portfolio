@@ -143,6 +143,7 @@
     --type-font-weight-black: 900;
 
     /* Border radius */
+    --type-border-radius-00: 0;
     --type-border-radius-01: 0.75rem;
     --type-border-radius-02: 1rem;
     --type-border-radius-03: 1.25rem;
@@ -891,6 +892,10 @@ section.no-padding-b {
         transition: var(--transition-delay);
     }
 
+    @include breakpoint-down(lg) {
+        border-radius: var(--type-border-radius-00);
+    }
+
     @include breakpoint-down(md) {
         .row {
             flex-direction: column-reverse;
@@ -1001,8 +1006,17 @@ section.no-padding-b {
         z-index: -1;
 
         img {
+            position: relative;
             width: 22vw;
             height: 100%;
+        }
+
+        &-left {
+            left: 3%;
+        }
+
+        &-right {
+            right: 3%;
         }
     }
 }
@@ -1088,12 +1102,28 @@ section.no-padding-b {
         }
 
         &__card {
-            padding: 2.75rem 2.5rem;
+            padding: 1.5rem;
         }
     }
 }
 
 @include breakpoint-down(sm) {
+    .service {
+        &__hand {
+            img {
+                width: 45vw;
+            }
+
+            &-left {
+                left: -11%;
+            }
+
+            &-right {
+                right: -11%;
+            }
+        }
+    }
+
     .skill {
         &__inner {
             .flex-col {
@@ -1116,12 +1146,26 @@ section.no-padding-b {
     }
 }
 
-
+/// /* ------------------------- Experience -------------------------------------------------- */
 .experience {
+    background: var(--color-black);
+    border-radius: var(--type-border-radius-50);
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(../images/experience-bg.jpg) top center/cover no-repeat;
+        top: 0;
+        opacity: 0.2;
+    }
+
     &__timeline {
         position: relative;
         display: grid;
         gap: 1.875rem;
+        overflow: hidden;
 
         .row {
             display: flex;
@@ -1157,14 +1201,16 @@ section.no-padding-b {
 
         &-name {
             margin-bottom: 1rem;
-            h3{
-                text-transform:uppercase;
+
+            h3 {
+                text-transform: uppercase;
             }
 
         }
 
         &-position {
             margin-bottom: 1rem;
+
             p {
                 color: var(--color-gray-light);
             }
@@ -1213,57 +1259,150 @@ section.no-padding-b {
 
         }
     }
-  
- 
+
+
     @include breakpoint-down(xl) {
         &__timeline {
             .row {
                 gap: 9rem;
             }
         }
-        &__year{
+
+        &__year {
             width: 30%;
             justify-content: start;
         }
-        &__company{
+
+        &__company {
             width: 70%;
         }
+
         &__bullet {
             left: 28.88%;
         }
     }
 
-       @include breakpoint-down(lg) {
+    @include breakpoint-down(lg) {
+        border-radius: var(--type-border-radius-00);
+
         &__timeline {
             .row {
                 gap: 6rem;
             }
         }
+
         &__bullet {
             left: 28.55%;
         }
     }
+
     @include breakpoint-down(md) {
-&__timeline{
-    .row{
-        gap: 1.25rem;
-        flex-wrap: wrap;
+        &__timeline {
+            .row {
+                gap: 1.25rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        &__line {
+            left: 11px;
+        }
+
+        &__year {
+            width: 100%;
+            margin-left: 2.5rem;
+        }
+
+        &__company {
+            width: 100%;
+            padding: 1.5rem;
+            margin-left: 2.5rem;
+        }
+
+        &__bullet {
+            left: 0;
+        }
     }
 }
-&__line{
-    left: 11px;
-}
-&__year{
-    width: 100%;
-    margin-left: 2.5rem;
-}
-&__company{
-    width: 100%;
-    padding: 1.5rem;
-    margin-left: 2.5rem;
-}
-&__bullet{
-    left: 0;
-}
+
+
+/// /* ------------------------- Protfolio -------------------------------------------------- */
+.portfolio{
+    &__img{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        perspective: 2200px;
+        background: var(--ColorDarkA);
+        img{
+            position: absolute;
+            box-shadow: 0 0 31px black;
+        }
+        &--01{
+            z-index: 1;
+            height: 50vh;
+            bottom: 15%;
+            left: 5%;
+        }
+        &--02{
+            z-index: 2;
+            height: 45vh;
+            bottom: 40%;
+            right: 5%;
+        }
+        &--03{
+            z-index: 3;
+            height: 40vh;
+            bottom: 22%;
+            right: 25%;
+        }
+        &--04{
+            z-index: 4;
+            height: 31vh;
+            bottom: 55%;
+            left: 13%;
+        }
+        &--05{
+            z-index: 5;
+            height: 50vh;
+            bottom: 22%;
+            left: 36%;
+        }
+        &--06{
+            z-index: 6;
+            height: 31vh;
+            bottom: 13%;
+            left: 13%; 
+        }
+        &--07{
+            z-index: 7;
+            height: 31vh;
+            bottom: 10%;
+            right: 13%;
+        }
     }
+
 }
+
+
+  #codeby {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #codeby a {
+    text-decoration: none;
+    font-size: var(--type-heading-h1-font-size);
+    font-weight: var(--type-font-weight-black);
+    color: var(--color-white);
+  }
+  
+  #codeby a span {
+    font-weight: var(--type-font-weight-black);
+    display: inline-block;
+    color: var(--ColorWhiteA);
+  }
