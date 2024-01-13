@@ -181,6 +181,7 @@ function LandingPageScrollTrigger() {
       }
   })
   LandingPageScrollTrigger
+  
       .to('.portfolio__img .portfolio__img--07', { transform: 'translateZ(4500px)', }, 0)
       .to('.portfolio__img .portfolio__img--06', { transform: 'translateZ(3700px)', }, 0)
       .to('.portfolio__img .portfolio__img--05', { transform: 'translateZ(3100px)', }, 0)
@@ -188,7 +189,10 @@ function LandingPageScrollTrigger() {
       .to('.portfolio__img .portfolio__img--03', { transform: 'translateZ(2600px)', }, 0)
       .to('.portfolio__img .portfolio__img--02', { transform: 'translateZ(2400px)', }, 0)
       .to('.portfolio__img .portfolio__img--01', { transform: 'translateZ(2200px)', }, 0)
-      .from('.portfolio__img .portfolio__text', { y: 0, opacity: 0 }, 0.2)
+     
+
+      .from('.portfolio__slider .portfolio__slider--01', { x: 130, opacity: 0 }, 0.31)
+      .from('.portfolio__slider .portfolio__text', { y: 130, opacity: 0 }, 0.31)
 }
 
 
