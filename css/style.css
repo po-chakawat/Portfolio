@@ -1000,6 +1000,7 @@ section.no-padding-b {
 .portfolio__img img {
   position: absolute;
   box-shadow: 0 0 31px black;
+  border-radius: var(--type-border-radius-01);
 }
 .portfolio__img--01 {
   z-index: 1;
@@ -1054,25 +1055,40 @@ section.no-padding-b {
 }
 .portfolio__slider--01 {
   z-index: 1;
-  height: 50vh;
-  bottom: 15%;
-  left: -15%;
+  height: 20vh;
+  top: 14%;
+  left: 10%;
 }
 .portfolio__slider--02 {
   z-index: 2;
-  height: 45vh;
-  bottom: 40%;
-  right: 5%;
+  height: 25vh;
+  top: 40%;
+  left: -5%;
 }
 .portfolio__slider--03 {
-  z-index: 3;
-  height: 40vh;
-  bottom: 22%;
-  right: 25%;
+  z-index: 1;
+  height: 20vh;
+  bottom: 5%;
+  left: 15%;
 }
 .portfolio__slider--04 {
   z-index: 4;
-  height: 31vh;
-  bottom: 55%;
-  left: 13%;
+  height: 20vh;
+  top: 15%;
+  right: 15%;
+}
+.portfolio__slider--05 {
+  z-index: 4;
+  height: 23vh;
+  bottom: 30%;
+  right: -3%;
+}
+.portfolio__slider--06 {
+  z-index: 4;
+  height: 20vh;
+  bottom: 10%;
+  right: 10%;
+}
+.portfolio__text {
+  z-index: 3;
 }/*# sourceMappingURL=style.css.map */

@@ -191,8 +191,15 @@ function LandingPageScrollTrigger() {
       .to('.portfolio__img .portfolio__img--01', { transform: 'translateZ(2200px)', }, 0)
      
 
-      .from('.portfolio__slider .portfolio__slider--01', { x: 130, opacity: 0 }, 0.31)
-      .from('.portfolio__slider .portfolio__text', { y: 130, opacity: 0 }, 0.31)
+      .from('.portfolio__slider .portfolio__slider--01', { x: 400 ,y: 200, opacity: 0 }, 0.31)
+      .from('.portfolio__slider .portfolio__slider--02', { x: 400 , opacity: 0 }, 0.31)
+      .from('.portfolio__slider .portfolio__slider--03', { x: 400 ,y: -200, opacity: 0 }, 0.31)
+      .from('.portfolio__slider .portfolio__slider--04', { x: -400 ,y: 200, opacity: 0 }, 0.31)
+      .from('.portfolio__slider .portfolio__slider--05', { x: -400 , opacity: 0 }, 0.31)
+      .from('.portfolio__slider .portfolio__slider--06', { x: -400 ,y:-200, opacity: 0 }, 0.31)
+      .from('.portfolio__slider .test', { x: 0, opacity: 0 }, 0.5)
+      .from('.portfolio__slider .portfolio__bg', { x: 0 , opacity: 0 }, 0.31)
+      .from('.portfolio__slider .portfolio__text', { y: 130, opacity: 0 }, 0.5)
 }
 
 
