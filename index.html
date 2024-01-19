@@ -433,36 +433,31 @@
         <!--  Sec Portfolio -->
         <section id="SecPortfolio" class="portfolio">
             <div class="heading text-center">
-                <h2 class="heading__title">Portfolio</h2>
+                <h2 class="heading__title"></h2>
             </div>
-            <div  class="portfolio__img">
-                <img  class="portfolio__img--01" src="./images/protfolio/port-1.jpg" alt="">
-                <img  class="portfolio__img--02" src="./images/protfolio/port-2.jpg" alt="">
-                <img class="portfolio__img--03" src="./images/protfolio/port-3.jpg" alt="">
-                <img class="portfolio__img--04" src="./images/protfolio/port-4.jpg" alt="">
-                <img class="portfolio__img--05" src="./images/protfolio/port-5.jpg" alt="">
-                <img class="portfolio__img--06" src="./images/protfolio/port-6.jpg" alt="">
-                <img class="portfolio__img--07" src="./images/protfolio/port-7.jpg" alt="">
-  
-                <div class="portfolio__slider">
-                    <h2 class="portfolio__text">All work is based on previous work assigned by the company
-                        and work received as a freelancer.</h2>
-                        <img  class="portfolio__slider--01" src="./images/protfolio/port-7.jpg" alt="">
-                        <img  class="portfolio__slider--02" src="./images/protfolio/port-8.jpg" alt="">
-                        <img  class="portfolio__slider--03" src="./images/protfolio/port-9.jpg" alt="">
-                        <img  class="portfolio__slider--04" src="./images/protfolio/port-1.jpg" alt="">
-                        <img  class="portfolio__slider--05" src="./images/protfolio/port-2.jpg" alt="">
-                        <img  class="portfolio__slider--06" src="./images/protfolio/port-3.jpg" alt="">
-                        <img style="opacity: 0.07;"  class="portfolio__bg" src="./images/protfolio/bg-portfolio.jpg" alt="">
-                   </div>
-                  
+            <div class="portfolio__inner">
+                <div class="portfolio__monitor">
+                    <div class="portfolio__monitor-text"></div>
+                </div>
+                <video class="portfolio__animate portfolio__video  portfolio__video--code" autoplay loop muted
+                    playsinline>
+                    <source src="./video/video-code.mp4" type="video/mp4" />
+                </video>
+                <video class="portfolio__animate portfolio__video  portfolio__video--designsystem" autoplay loop muted
+                    playsinline>
+                    <source src="./video/video-design-system.mp4" type="video/mp4" />
+                </video>
+                <video class="portfolio__animate portfolio__video  portfolio__video--principles" autoplay loop muted
+                    playsinline>
+                    <source src="./video/video-principles.mp4" type="video/mp4" />
+                </video>
             </div>
         </section>
 
 
         <!--  Sec Contact -->
         <section id="SecContact" class="contact">
-              
+
             <div class="container">
                 <div class="portfolio__sliders">
                     <div class="heading text-center">
@@ -479,6 +474,7 @@
     </div>
     <!-- Script Js -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
     <script src="js/script.js"></script>
 
     <!-- gsap.min.js -->

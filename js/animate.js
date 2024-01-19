@@ -172,23 +172,23 @@ function LandingPageScrollTrigger() {
 
   let LandingPageScrollTrigger = gsap.timeline({
       scrollTrigger: {
-          trigger: ".portfolio__img",
+          trigger: ".portfolio__inner",
           start: "top 0%",
           end: "bottom 0%",
           markers:true,
-          pin: ".portfolio__img",
+          pin: ".portfolio__inner",
           scrub: 2.2,
       }
   })
   LandingPageScrollTrigger
   
-      .to('.portfolio__img .portfolio__img--07', { transform: 'translateZ(4500px)', }, 0)
-      .to('.portfolio__img .portfolio__img--06', { transform: 'translateZ(3700px)', }, 0)
-      .to('.portfolio__img .portfolio__img--05', { transform: 'translateZ(3100px)', }, 0)
-      .to('.portfolio__img .portfolio__img--04', { transform: 'translateZ(2800px)', }, 0)
-      .to('.portfolio__img .portfolio__img--03', { transform: 'translateZ(2600px)', }, 0)
-      .to('.portfolio__img .portfolio__img--02', { transform: 'translateZ(2400px)', }, 0)
-      .to('.portfolio__img .portfolio__img--01', { transform: 'translateZ(2200px)', }, 0)
+      .to('.portfolio__inner .portfolio__monitor', { transform: 'translateZ(4500px)', }, 0)
+      .to('.portfolio__inner .portfolio__animate--code', { transform: 'translateZ(3700px)', }, 0)
+      .to('.portfolio__inner .portfolio__img--05', { transform: 'translateZ(3100px)', }, 0)
+      .to('.portfolio__inner .portfolio__img--04', { transform: 'translateZ(2800px)', }, 0)
+      .to('.portfolio__inner .portfolio__img--03', { transform: 'translateZ(2600px)', }, 0)
+      .to('.portfolio__inner .portfolio__img--02', { transform: 'translateZ(2400px)', }, 0)
+      .to('.portfolio__inner .portfolio__img--01', { transform: 'translateZ(2200px)', }, 0)
      
 
       .from('.portfolio__slider .portfolio__slider--01', { x: 400 ,y: 200, opacity: 0 }, 0.31)
@@ -200,6 +200,7 @@ function LandingPageScrollTrigger() {
       .from('.portfolio__slider .test', { x: 0, opacity: 0 }, 0.5)
       .from('.portfolio__slider .portfolio__bg', { x: 0 , opacity: 0 }, 0.31)
       .from('.portfolio__slider .portfolio__text', { y: 130, opacity: 0 }, 0.5)
+      .from('.portfolio__slider .portfolio__text--02', { y: 130, opacity: 0 ,backgroundColor: "#f0f0f0"}, 1)
 }
 
 

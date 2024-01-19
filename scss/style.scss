@@ -1328,7 +1328,25 @@ section.no-padding-b {
 
 /// /* ------------------------- Protfolio -------------------------------------------------- */
 .portfolio {
-    &__img {
+    &::before , &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+           }
+           &::before{
+            background: url(../images/protfolio/bg-circle-left.svg)top center/contain no-repeat;
+            left: -50%;
+           }
+           &::after{
+            background: url(../images/protfolio/bg-circle-right.svg)top center/contain no-repeat;
+            right: -50%;
+           }
+
+
+    &__inner {
         position: relative;
         width: 100vw;
         height: 100vh;
@@ -1336,116 +1354,88 @@ section.no-padding-b {
         perspective: 2200px;
         background: var(--ColorDarkA);
 
-        img {
-            position: absolute;
-            box-shadow: 0 0 31px black;
-            border-radius: var(--type-border-radius-01);
-        }
-
-        &--01 {
-            z-index: 1;
-            height: 50vh;
-            bottom: 15%;
-            left: 5%;
-        }
-
-        &--02 {
-            z-index: 2;
-            height: 45vh;
-            bottom: 40%;
-            right: 5%;
-        }
-
-        &--03 {
-            z-index: 3;
-            height: 40vh;
-            bottom: 22%;
-            right: 25%;
-        }
-
-        &--04 {
-            z-index: 4;
-            height: 31vh;
-            bottom: 55%;
-            left: 13%;
-        }
-
-        &--05 {
-            z-index: 5;
-            height: 50vh;
-            bottom: 22%;
-            left: 36%;
-        }
-
-        &--06 {
-            z-index: 6;
-            height: 31vh;
-            bottom: 13%;
-            left: 13%;
-        }
-
-        &--07 {
-            z-index: 7;
-            height: 31vh;
-            bottom: 10%;
-            right: 13%;
-        }
+    
+       
     }
 
-    &__slider {
-        height: 100vh;
-        width: 60%;
-        margin: 0 auto;
+    &__monitor {
+        width: 100%;
+        height: 100%;
         display: flex;
-        text-align: center;
-        justify-content: center;
         align-items: center;
 
-        &--01 {
-            z-index: 1;
-            height: 20vh;
-            top: 14%;
-            left: 10%;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 70vh;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            background: url(../images/protfolio/monitor.svg) top center/contain no-repeat;
         }
 
-        &--02 {
-            z-index: 2;
+        &-text {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    &__video {
+        overflow: hidden;
+        border-radius: var(--type-border-radius-02);
+        box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.35), 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+        border: 1px solid #323232;
+
+        &--code {
+            right: 10%;
+            bottom: 25%;
             height: 25vh;
-            top: 40%;
-            left: -5%;
         }
 
-        &--03 {
-            z-index: 1;
-            height: 20vh;
-            bottom: 5%;
-            left: 15%;
-        }
-
-        &--04 {
-            z-index: 4;
-            height: 20vh;
-            top: 15%;
-            right: 15%;
-        }
-
-        &--05 {
-            z-index: 4;
-            height: 23vh;
-            bottom: 30%;
-            right: -3%;
-        }
-
-        &--06 {
-            z-index: 4;
-            height: 20vh;
-            bottom: 10%;
+        &--designsystem {
+            top: 17%;
+            height: 30vh;
             right: 10%;
         }
+
+        &--principles {
+            top: 24%;
+            height: 45vh;
+            left: 12%;
+        }
     }
 
-    &__text {
-        z-index: 3;
+    &__animate {
+        position: absolute;
+
     }
 
+    .eletest {
+        position: absolute;
+        top: 0;
+    }
+
+    .bubble {
+        position: relative;
+        top: 0;
+        background: url(../images/protfolio/bubble.png) top center/contain no-repeat;
+        mix-blend-mode: lighten;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: var(--bg-gradient-neon);
+            mix-blend-mode: overlay;
+        }
+    }
 }

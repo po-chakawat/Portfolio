@@ -90,3 +90,29 @@ const mouseHandler = (e) => {
   document.querySelector(".service").addEventListener("mousemove", (e)=>{
     mouseHandler(e)
   });
+
+// Animate Tag Clound
+  const myTags = [
+    'HTML', 'CSS', 'JavaScript', 'Design System', 'SCSS', 'Figma',
+    'Interactive', 'XD', 'UX / UI', 'Bootstrap', 'Wireframe', 'Photoshop', 'Illustration', 'Color', 'Frontend eveloper', 'JQuery'
+ ];
+ 
+ var tagCloud = TagCloud('.portfolio__monitor-text', myTags,{
+ 
+   // radius in px
+   radius: 200,
+ 
+   // animation speed
+   // slow, normal, fast
+   maxSpeed: 'fast',
+   initSpeed: 'fast',
+ 
+   // 0 = top
+   // 90 = left
+   // 135 = right-bottom
+   direction: 135,
+   
+   // interact with cursor move on mouse out
+   keep: true,
+   
+ });
