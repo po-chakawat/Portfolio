@@ -1328,22 +1328,26 @@ section.no-padding-b {
 
 /// /* ------------------------- Protfolio -------------------------------------------------- */
 .portfolio {
-    &::before , &::after{
+
+    &::before,
+    &::after {
         content: '';
         position: absolute;
         top: 0;
         width: 100%;
         height: 100%;
         z-index: -1;
-           }
-           &::before{
-            background: url(../images/protfolio/bg-circle-left.svg)top center/contain no-repeat;
-            left: -50%;
-           }
-           &::after{
-            background: url(../images/protfolio/bg-circle-right.svg)top center/contain no-repeat;
-            right: -50%;
-           }
+    }
+
+    &::before {
+        background: url(../images/protfolio/bg-circle-left.svg)top center/contain no-repeat;
+        left: -50%;
+    }
+
+    &::after {
+        background: url(../images/protfolio/bg-circle-right.svg)top center/contain no-repeat;
+        right: -50%;
+    }
 
 
     &__inner {
@@ -1354,8 +1358,8 @@ section.no-padding-b {
         perspective: 2200px;
         background: var(--ColorDarkA);
 
-    
-       
+
+
     }
 
     &__monitor {
@@ -1389,53 +1393,118 @@ section.no-padding-b {
     }
 
     &__video {
+        position: absolute;
         overflow: hidden;
         border-radius: var(--type-border-radius-02);
         box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.35), 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
         border: 1px solid #323232;
 
         &--code {
-            right: 10%;
-            bottom: 25%;
-            height: 25vh;
+            right: 15%;
+            bottom: 12%;
+            height: 24vh;
         }
 
         &--designsystem {
-            top: 17%;
+            top: 19%;
             height: 30vh;
-            right: 10%;
+            right: 13%;
         }
 
         &--principles {
-            top: 24%;
-            height: 45vh;
-            left: 12%;
+            top: 21%;
+            height: 52vh;
+            left: 13%;
         }
     }
 
-    &__animate {
+    &__bubble {
         position: absolute;
+        border-radius: var(--type-border-radius-full);
 
-    }
-
-    .eletest {
-        position: absolute;
-        top: 0;
-    }
-
-    .bubble {
-        position: relative;
-        top: 0;
-        background: url(../images/protfolio/bubble.png) top center/contain no-repeat;
-        mix-blend-mode: lighten;
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: var(--bg-gradient-neon);
-            mix-blend-mode: overlay;
+        i {
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        &--01 {
+            top: 12%;
+            left: 16%;
+            animation: float02 6s ease-in-out infinite;
+        }
+
+        &--02 {
+            width: 125px;
+            height: 125px;
+            bottom: 10%;
+            left: 22%;
+            background: url(../images/protfolio/bubble-02.svg) top center/contain no-repeat;
+            animation: float01 6s ease-in-out infinite;
+        }
+
+        &--03 {
+            width: 67px;
+            height: 67px;
+            top: 13%;
+            right: 50%;
+            transform: translateX(50%);
+            background: url(../images/protfolio/bubble-03.svg) top center/contain no-repeat;
+            animation: float01 6s ease-in-out infinite;
+        }
+
+        &--04 {
+            top: 8%;
+            right: 8%;
+            animation: float02 6s ease-in-out infinite;
+        }
+
+        &--05 {
+            width: 165px;
+            height: 165px;
+            bottom: 29%;
+            right: 10%;
+            background: url(../images/protfolio/bubble-05.svg) top center/contain no-repeat;
+            animation: float01 6s ease-in-out infinite;
+        }
+
+        @keyframes float01 {
+            0% {
+                transform: translatey(0px);
+            }
+
+            50% {
+                transform: translatey(-50px);
+            }
+
+            100% {
+                transform: translatey(0px);
+            }
+        }
+
+        @keyframes float02 {
+            0% {
+                transform: translatey(0px);
+            }
+
+            50% {
+                transform: translatey(50px);
+            }
+
+            100% {
+                transform: translatey(0px);
+            }
+        }
+    }
+
+    &__title {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        display: flex;
+        width: 100%;
+        height: 100vh;
     }
 }

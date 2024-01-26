@@ -1042,44 +1042,100 @@ section.no-padding-b {
   height: 100%;
 }
 .portfolio__video {
+  position: absolute;
   overflow: hidden;
   border-radius: var(--type-border-radius-02);
   box-shadow: 0px 25px 30px 0px rgba(0, 0, 0, 0.35), 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   border: 1px solid #323232;
 }
 .portfolio__video--code {
-  right: 10%;
-  bottom: 25%;
-  height: 25vh;
+  right: 15%;
+  bottom: 12%;
+  height: 24vh;
 }
 .portfolio__video--designsystem {
-  top: 17%;
+  top: 19%;
   height: 30vh;
-  right: 10%;
+  right: 13%;
 }
 .portfolio__video--principles {
-  top: 24%;
-  height: 45vh;
-  left: 12%;
+  top: 21%;
+  height: 52vh;
+  left: 13%;
 }
-.portfolio__animate {
+.portfolio__bubble {
   position: absolute;
+  border-radius: var(--type-border-radius-full);
 }
-.portfolio .eletest {
+.portfolio__bubble i {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio__bubble--01 {
+  top: 12%;
+  left: 16%;
+  animation: float02 6s ease-in-out infinite;
+}
+.portfolio__bubble--02 {
+  width: 125px;
+  height: 125px;
+  bottom: 10%;
+  left: 22%;
+  background: url(../images/protfolio/bubble-02.svg) top center/contain no-repeat;
+  animation: float01 6s ease-in-out infinite;
+}
+.portfolio__bubble--03 {
+  width: 67px;
+  height: 67px;
+  top: 13%;
+  right: 50%;
+  transform: translateX(50%);
+  background: url(../images/protfolio/bubble-03.svg) top center/contain no-repeat;
+  animation: float01 6s ease-in-out infinite;
+}
+.portfolio__bubble--04 {
+  top: 8%;
+  right: 8%;
+  animation: float02 6s ease-in-out infinite;
+}
+.portfolio__bubble--05 {
+  width: 165px;
+  height: 165px;
+  bottom: 29%;
+  right: 10%;
+  background: url(../images/protfolio/bubble-05.svg) top center/contain no-repeat;
+  animation: float01 6s ease-in-out infinite;
+}
+@keyframes float01 {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-50px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes float02 {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(50px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+.portfolio__title {
   position: absolute;
+  z-index: 5;
   top: 0;
-}
-.portfolio .bubble {
-  position: relative;
-  top: 0;
-  background: url(../images/protfolio/bubble.png) top center/contain no-repeat;
-  mix-blend-mode: lighten;
-}
-.portfolio .bubble::before {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: var(--bg-gradient-neon);
-  mix-blend-mode: overlay;
+  display: flex;
+  width: 100%;
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */

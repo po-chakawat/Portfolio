@@ -183,16 +183,17 @@ function LandingPageScrollTrigger() {
   LandingPageScrollTrigger
   
       .to('.portfolio__inner .portfolio__monitor', { transform: 'translateZ(4500px)', }, 0)
-      .to('.portfolio__inner .portfolio__animate--code', { transform: 'translateZ(3700px)', }, 0)
-      .to('.portfolio__inner .portfolio__img--05', { transform: 'translateZ(3100px)', }, 0)
-      .to('.portfolio__inner .portfolio__img--04', { transform: 'translateZ(2800px)', }, 0)
-      .to('.portfolio__inner .portfolio__img--03', { transform: 'translateZ(2600px)', }, 0)
-      .to('.portfolio__inner .portfolio__img--02', { transform: 'translateZ(2400px)', }, 0)
-      .to('.portfolio__inner .portfolio__img--01', { transform: 'translateZ(2200px)', }, 0)
-     
+      .to('.portfolio__inner .portfolio__video--code', { transform: 'translateZ(3700px)', }, 0)
+      .to('.portfolio__inner .portfolio__video--designsystem', { transform: 'translateZ(3100px)', }, 0)
+      .to('.portfolio__inner .portfolio__video--principles', { transform: 'translateZ(2800px)', }, 0)
+      .to('.portfolio__inner .portfolio__bubble--01', { opacity: 0, }, 0)
+      .to('.portfolio__inner .portfolio__bubble--02', { opacity: 0, }, 0)
+      .to('.portfolio__inner .portfolio__bubble--03', { opacity: 0, }, 0)
+      .to('.portfolio__inner .portfolio__bubble--04', { opacity: 0, }, 0)
+      .to('.portfolio__inner .portfolio__bubble--05', { opacity: 0, }, 0)
 
-      .from('.portfolio__slider .portfolio__slider--01', { x: 400 ,y: 200, opacity: 0 }, 0.31)
-      .from('.portfolio__slider .portfolio__slider--02', { x: 400 , opacity: 0 }, 0.31)
+      .from('.portfolio__inner .portfolio__title--01 ', { y: 130, opacity: 0 }, 0.31)
+      .from('.portfolio__slider .portfolio__title--02', { y: 400 , opacity: 0 }, 0.31)
       .from('.portfolio__slider .portfolio__slider--03', { x: 400 ,y: -200, opacity: 0 }, 0.31)
       .from('.portfolio__slider .portfolio__slider--04', { x: -400 ,y: 200, opacity: 0 }, 0.31)
       .from('.portfolio__slider .portfolio__slider--05', { x: -400 , opacity: 0 }, 0.31)
