@@ -192,12 +192,15 @@ function LandingPageScrollTrigger() {
       .to('.portfolio__inner .portfolio__bubble--04', { opacity: 0, }, 0)
       .to('.portfolio__inner .portfolio__bubble--05', { opacity: 0, }, 0)
 
-      .from('.portfolio__inner .portfolio__title--01 ', { y: 130, opacity: 0 }, 0.31)
-      .from('.portfolio__slider .portfolio__title--02', { y: 400 , opacity: 0 }, 0.31)
-      .from('.portfolio__slider .portfolio__slider--03', { x: 400 ,y: -200, opacity: 0 }, 0.31)
-      .from('.portfolio__slider .portfolio__slider--04', { x: -400 ,y: 200, opacity: 0 }, 0.31)
-      .from('.portfolio__slider .portfolio__slider--05', { x: -400 , opacity: 0 }, 0.31)
-      .from('.portfolio__slider .portfolio__slider--06', { x: -400 ,y:-200, opacity: 0 }, 0.31)
+      
+      .from('.portfolio__inner .portfolio__title--01 ', { y: 130, opacity: 0  }, 0.31)
+      .from('.portfolio__inner .portfolio__title--02', { y: 130 , opacity: 0 }, 1)
+      .from('.portfolio__inner .portfolio__title--03', { y: 130 , opacity: 0 }, 2)
+      .from('.portfolio__inner .portfolio__title--04', { y: 130 , opacity: 0 }, 3)
+      .from('.portfolio__inner .portfolio__bg--01', { opacity: 0 }, 0.31)
+      .from('.portfolio__inner .portfolio__bg--02', {opacity: 0 }, 1)
+      .from('.portfolio__inner .portfolio__bg--03', {opacity: 0 }, 2)
+      .from('.portfolio__inner .portfolio__bg--04', {opacity: 0 }, 3)
       .from('.portfolio__slider .test', { x: 0, opacity: 0 }, 0.5)
       .from('.portfolio__slider .portfolio__bg', { x: 0 , opacity: 0 }, 0.31)
       .from('.portfolio__slider .portfolio__text', { y: 130, opacity: 0 }, 0.5)
@@ -205,6 +208,9 @@ function LandingPageScrollTrigger() {
 }
 
 
+
+
+/////////////test////////////
 
 
 window.onload = () => {
@@ -265,7 +271,6 @@ hoverCursors.forEach(function (cursor) {
     });
   });
 });
-
 
 
 

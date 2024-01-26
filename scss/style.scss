@@ -1373,9 +1373,6 @@ section.no-padding-b {
             position: absolute;
             width: 100%;
             height: 70vh;
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
             background: url(../images/protfolio/monitor.svg) top center/contain no-repeat;
         }
 
@@ -1499,7 +1496,7 @@ section.no-padding-b {
         }
     }
 
-    &__title {
+    &__presen {
         position: absolute;
         z-index: 5;
         top: 0;
@@ -1507,4 +1504,35 @@ section.no-padding-b {
         width: 100%;
         height: 100vh;
     }
+
+    &__bg {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        &--01 {
+            background-color: #062222;
+        }
+
+        &--02 {
+            background-color: #22061D;
+        }
+
+        &--03 {
+            background-color: #170622;
+        }
+
+        &--04 {
+            background-color: #171717;
+        }
+    }
+&__title{
+    font-size: 80px;
+    font-weight: var(--type-font-weight-semibold);
 }
+
+}
+
