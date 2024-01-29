@@ -164,17 +164,18 @@ else {
 
 //---------------------/Portfolio Page ScrollTrigger---------------------
 
+
 function LandingPageScrollTrigger() {
 
-  gsap.to('portfolio', { // LoadingAnimation---------------------
+  gsap.to('.portfolio__inner', { // LoadingAnimation---------------------
       opacity: 1, duration: 1.3,
   }) // /LoadingAnimation---------------------
 
   let LandingPageScrollTrigger = gsap.timeline({
       scrollTrigger: {
           trigger: ".portfolio__inner",
-          start: "top 0%",
-          end: "bottom 0%",
+          start: "top top",
+          end: "100% 0%",
           markers:true,
           pin: ".portfolio__inner",
           scrub: 2.2,
@@ -209,15 +210,29 @@ function LandingPageScrollTrigger() {
 
 
 
+let horizontalSection = document.querySelector('.slideport__horizontal');
 
-/////////////test////////////
+console.log(horizontalSection.scrollWidth);
 
+gsap.to('.slideport__horizontal', {
+  x: () => horizontalSection.scrollWidth * -1,
+  xPercent: 100,
+  scrollTrigger: {
+    trigger: '.slideport__horizontal',
+    start: 'center center',
+    end: '+=2000px',
+    pin: '.slideport',
+    scrub: true,
+    invalidateOnRefresh: true
+  }
+});
 
 window.onload = () => {
   TopScrollTrigger()
   AboutScrollTrigger()
   ServiceScrollTrigger()
   LandingPageScrollTrigger()
+
 }
 
 

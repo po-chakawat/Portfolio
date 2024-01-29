@@ -1014,7 +1014,7 @@ section.no-padding-b {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  perspective: 2200px;
+  perspective: 4000px;
   background: var(--ColorDarkA);
 }
 .portfolio__monitor {
@@ -1162,4 +1162,37 @@ section.no-padding-b {
 .portfolio__title {
   font-size: 80px;
   font-weight: var(--type-font-weight-semibold);
+}
+
+.slideport__scroll {
+  overflow: hidden;
+  height: auto;
+}
+.slideport__horizontal {
+  display: flex;
+  height: 100%;
+}
+.slideport__horizontal > div {
+  display: flex;
+  flex-shrink: 0;
+  padding: 0 5px;
+}
+.slideport__horizontal > div:first-child {
+  padding: 0 5px 0 15px;
+}
+.slideport__horizontal > div:last-child {
+  padding: 0 15px 0 5px;
+}
+.slideport__card {
+  width: 640px;
+  padding: 0;
+  background-color: var(--bg-black-opacity);
+  -webkit-backdrop-filter: var(--backdrop--blur);
+  backdrop-filter: var(--backdrop--blur);
+  border-radius: var(--type-border-radius-02);
+  overflow: hidden;
+}
+.slideport__card img {
+  width: 100%;
+  display: block;
 }/*# sourceMappingURL=style.css.map */
