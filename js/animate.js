@@ -167,41 +167,41 @@ else {
 
 function LandingPageScrollTrigger() {
 
-  gsap.to('.portfolio__inner', { // LoadingAnimation---------------------
+  gsap.to('.showcase__inner', { // LoadingAnimation---------------------
       opacity: 1, duration: 1.3,
   }) // /LoadingAnimation---------------------
 
   let LandingPageScrollTrigger = gsap.timeline({
       scrollTrigger: {
-          trigger: ".portfolio__inner",
+          trigger: ".showcase__inner",
           start: "top top",
           end: "100% 0%",
           markers:true,
-          pin: ".portfolio__inner",
+          pin: ".showcase__inner",
           scrub: 2.2,
       }
   })
   LandingPageScrollTrigger
   
-      .to('.portfolio__inner .portfolio__monitor', { transform: 'translateZ(4500px)', }, 0)
-      .to('.portfolio__inner .portfolio__video--code', { transform: 'translateZ(3700px)', }, 0)
-      .to('.portfolio__inner .portfolio__video--designsystem', { transform: 'translateZ(3100px)', }, 0)
-      .to('.portfolio__inner .portfolio__video--principles', { transform: 'translateZ(2800px)', }, 0)
-      .to('.portfolio__inner .portfolio__bubble--01', { opacity: 0, }, 0)
-      .to('.portfolio__inner .portfolio__bubble--02', { opacity: 0, }, 0)
-      .to('.portfolio__inner .portfolio__bubble--03', { opacity: 0, }, 0)
-      .to('.portfolio__inner .portfolio__bubble--04', { opacity: 0, }, 0)
-      .to('.portfolio__inner .portfolio__bubble--05', { opacity: 0, }, 0)
+      .to('.showcase__inner .showcase__monitor', { transform: 'translateZ(4500px)', }, 0)
+      .to('.showcase__inner .showcase__video--code', { transform: 'translateZ(3700px)', }, 0)
+      .to('.showcase__inner .showcase__video--designsystem', { transform: 'translateZ(3100px)', }, 0)
+      .to('.showcase__inner .showcase__video--principles', { transform: 'translateZ(2800px)', }, 0)
+      .to('.showcase__inner .showcase__bubble--01', { opacity: 0, }, 0)
+      .to('.showcase__inner .showcase__bubble--02', { opacity: 0, }, 0)
+      .to('.showcase__inner .showcase__bubble--03', { opacity: 0, }, 0)
+      .to('.showcase__inner .showcase__bubble--04', { opacity: 0, }, 0)
+      .to('.showcase__inner .showcase__bubble--05', { opacity: 0, }, 0)
 
       
-      .from('.portfolio__inner .portfolio__title--01 ', { y: 130, opacity: 0  }, 0.31)
-      .from('.portfolio__inner .portfolio__title--02', { y: 130 , opacity: 0 }, 1)
-      .from('.portfolio__inner .portfolio__title--03', { y: 130 , opacity: 0 }, 2)
-      .from('.portfolio__inner .portfolio__title--04', { y: 130 , opacity: 0 }, 3)
-      .from('.portfolio__inner .portfolio__bg--01', { opacity: 0 }, 0.31)
-      .from('.portfolio__inner .portfolio__bg--02', {opacity: 0 }, 1)
-      .from('.portfolio__inner .portfolio__bg--03', {opacity: 0 }, 2)
-      .from('.portfolio__inner .portfolio__bg--04', {opacity: 0 }, 3)
+      .from('.showcase__inner .showcase__title--01 ', { y: 130, opacity: 0  }, 0.31)
+      .from('.showcase__inner .showcase__title--02', { y: 130 , opacity: 0 }, 1)
+      .from('.showcase__inner .showcase__title--03', { y: 130 , opacity: 0 }, 2)
+      .from('.showcase__inner .showcase__title--04', { y: 130 , opacity: 0 }, 3)
+      .from('.showcase__inner .showcase__bg--01', { opacity: 0 }, 0.31)
+      .from('.showcase__inner .showcase__bg--02', {opacity: 0 }, 1)
+      .from('.showcase__inner .showcase__bg--03', {opacity: 0 }, 2)
+      .from('.showcase__inner .showcase__bg--04', {opacity: 0 }, 3)
     
 }
 
@@ -223,6 +223,8 @@ gsap.to('.slideport__horizontal', {
     invalidateOnRefresh: true
   }
 });
+
+
 
 window.onload = () => {
   TopScrollTrigger()
@@ -322,3 +324,10 @@ cards.forEach(card=>{
         gsap.to(text, {opacity:0, duration: .2},'<');
     })
 })
+
+
+
+
+
+
+

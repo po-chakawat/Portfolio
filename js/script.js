@@ -26,7 +26,7 @@ document.getElementById("NavExperience").addEventListener('click', function () {
 });
 document.getElementById("NavPortslide").addEventListener('click', function () {
     nav.className = "navmenu__desktop";
-    scroll(document.getElementById("SecPortfolio"), 1000);
+    scroll(document.getElementById("SecPortslide"), 1000);
 });
 
 $('.navmenu__mobile-btn').click(function () {
