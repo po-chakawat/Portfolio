@@ -202,10 +202,7 @@ function LandingPageScrollTrigger() {
       .from('.portfolio__inner .portfolio__bg--02', {opacity: 0 }, 1)
       .from('.portfolio__inner .portfolio__bg--03', {opacity: 0 }, 2)
       .from('.portfolio__inner .portfolio__bg--04', {opacity: 0 }, 3)
-      .from('.portfolio__slider .test', { x: 0, opacity: 0 }, 0.5)
-      .from('.portfolio__slider .portfolio__bg', { x: 0 , opacity: 0 }, 0.31)
-      .from('.portfolio__slider .portfolio__text', { y: 130, opacity: 0 }, 0.5)
-      .from('.portfolio__slider .portfolio__text--02', { y: 130, opacity: 0 ,backgroundColor: "#f0f0f0"}, 1)
+    
 }
 
 
@@ -288,6 +285,40 @@ hoverCursors.forEach(function (cursor) {
 });
 
 
+//---------------------/Cursor Mouse View More---------------------
+const cursorTag = document.querySelector(".cursor")
+const ball = cursorTag.querySelector("div")
+const text = cursorTag.querySelector("div span")
+const cards = document.querySelectorAll(".slideport__card[data-hover]")
 
+let currentX = 0
+let currentY = 0
+let animX = 0
+let animY = 0
+let speed = 0.2
 
+const animate=function(){
+    currentX += (animX - currentX) * speed
+    currentY += (animY - currentY) * speed
+    ball.style.left = currentX + "px"
+    ball.style.top = currentY + "px"
+    requestAnimationFrame(animate)
+}
+animate()
 
+document.addEventListener("mousemove", (e)=>{
+    animX = e.pageX
+    animY = e.pageY
+})
+
+cards.forEach(card=>{
+    card.addEventListener("mouseover",()=>{
+        text.innerHTML = card.getAttribute("data-hover") 
+        gsap.to(cursorTag, {height:"100px", width:"100px", duration: .4});
+        gsap.to(text,  {opacity:1, duration: .2});
+    })
+    card.addEventListener("mouseleave",()=>{
+        gsap.to(cursorTag, {height:"16px", width:"16px", duration: .4});
+        gsap.to(text, {opacity:0, duration: .2},'<');
+    })
+})
