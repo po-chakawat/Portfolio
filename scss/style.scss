@@ -1436,6 +1436,59 @@ section.no-padding-b {
         right: -50%;
     }
 
+    &__img {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        perspective: 2200px;
+img{
+    position: absolute;
+  box-shadow: 0 0 31px black;
+}
+  &--01 {
+    z-index: 1;
+    height: 50vh;
+    bottom: 15%;
+    left: 5%;
+  }
+  &--02 {
+    z-index: 2;
+    height: 45vh;
+    bottom: 40%;
+    right: 5%;
+  }
+  &--03 {
+    z-index: 3;
+    height: 40vh;
+    bottom: 22%;
+    right: 25%;
+  }
+  &--04 {
+    z-index: 4;
+  height: 31vh;
+  bottom: 55%;
+  left: 13%;
+  }
+  &--05 {
+    z-index: 5;
+  height: 50vh;
+  bottom: 22%;
+  left: 36%;
+  }
+  &--06{
+    z-index: 6;
+  height: 31vh;
+  bottom: 13%;
+  left: 13%;
+  }
+  &--07 {
+    z-index: 7;
+    height: 31vh;
+    bottom: 10%;
+    right: 13%;
+  }
+    }
 
     // &__inner {
     //     position: relative;

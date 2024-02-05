@@ -1075,6 +1075,59 @@ section.no-padding-b {
   background: url(../images/protfolio/bg-circle-right.svg) top center/contain no-repeat;
   right: -50%;
 }
+.showcase__img {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 2200px;
+}
+.showcase__img img {
+  position: absolute;
+  box-shadow: 0 0 31px black;
+}
+.showcase__img--01 {
+  z-index: 1;
+  height: 50vh;
+  bottom: 15%;
+  left: 5%;
+}
+.showcase__img--02 {
+  z-index: 2;
+  height: 45vh;
+  bottom: 40%;
+  right: 5%;
+}
+.showcase__img--03 {
+  z-index: 3;
+  height: 40vh;
+  bottom: 22%;
+  right: 25%;
+}
+.showcase__img--04 {
+  z-index: 4;
+  height: 31vh;
+  bottom: 55%;
+  left: 13%;
+}
+.showcase__img--05 {
+  z-index: 5;
+  height: 50vh;
+  bottom: 22%;
+  left: 36%;
+}
+.showcase__img--06 {
+  z-index: 6;
+  height: 31vh;
+  bottom: 13%;
+  left: 13%;
+}
+.showcase__img--07 {
+  z-index: 7;
+  height: 31vh;
+  bottom: 10%;
+  right: 13%;
+}
 .showcase__presen {
   position: absolute;
   z-index: 5;

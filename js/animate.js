@@ -183,15 +183,13 @@ function LandingPageScrollTrigger() {
   })
   LandingPageScrollTrigger
   
-      .to('.showcase__inner .showcase__monitor', { transform: 'translateZ(4500px)', }, 0)
-      .to('.showcase__inner .showcase__video--code', { transform: 'translateZ(3700px)', }, 0)
-      .to('.showcase__inner .showcase__video--designsystem', { transform: 'translateZ(3100px)', }, 0)
-      .to('.showcase__inner .showcase__video--principles', { transform: 'translateZ(2800px)', }, 0)
-      .to('.showcase__inner .showcase__bubble--01', { opacity: 0, }, 0)
-      .to('.showcase__inner .showcase__bubble--02', { opacity: 0, }, 0)
-      .to('.showcase__inner .showcase__bubble--03', { opacity: 0, }, 0)
-      .to('.showcase__inner .showcase__bubble--04', { opacity: 0, }, 0)
-      .to('.showcase__inner .showcase__bubble--05', { opacity: 0, }, 0)
+      .to('.showcase__img .showcase__img--07', { transform: 'translateZ(4500px)', }, 0)
+      .to('.showcase__img .showcase__img--06', { transform: 'translateZ(3700px)', }, 0)
+      .to('.showcase__img .showcase__img--05', { transform: 'translateZ(3100px)', }, 0)
+      .to('.showcase__img .showcase__img--04', { transform: 'translateZ(2800px)', }, 0)
+      .to('.showcase__img .showcase__img--03', { transform: 'translateZ(2600px)', }, 0)
+      .to('.showcase__img .showcase__img--02', { transform: 'translateZ(2400px)', }, 0)
+      .to('.showcase__img .showcase__img--01', { transform: 'translateZ(2200px)', }, 0)
 
       
       .from('.showcase__inner .showcase__title--01 ', { y: 130, opacity: 0  }, 0.31)
