@@ -119,11 +119,3 @@ var tagCloud = TagCloud('.portfolio__monitor-text', myTags, {
 });
 
 
-// Video Loop
-document.getElementById('myVideoPort').addEventListener('ended', myHandler, false);
-function myHandler(e) {
-    console.log('ended');
-    setTimeout(function () {
-        document.getElementById('myVideoPort').play();
-    }, 3000);
-}
